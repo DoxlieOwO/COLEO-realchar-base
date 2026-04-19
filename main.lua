@@ -1,8 +1,12 @@
 -------------------------------------------------------------------------------
 -- COLEO realchar base --
 local Player = Owner
-print(Player)
 local Character = Player.Character
+pcall(function()
+    if script.Parent ~= Character then
+        script.Parent = Character
+    end
+end)
 
 local RemoteFolder = Instance.new("Folder", Character)
 RemoteFolder.Name = "Remotes"
@@ -12,6 +16,9 @@ RemoteFolder.Name = "Remotes"
 local KeyDown = Instance.new("RemoteEvent", RemoteFolder)
 KeyDown.Name = "KeyDown"
 
+local KeyUp = Instance.new("RemoteEvent", RemoteFolder)
+KeyUp.Name = "KeyDown"
+
 
 --------------------- [[ FUNCTIONS ]] ---------------
 
@@ -20,7 +27,9 @@ KeyDown.Name = "KeyDown"
 
 --------------------- [[ INIT ]] ---------------
 
-
+NLS([[
+local Services = {}    
+]], Character)
 
 
 --------------------- [[ MAIN ]] ---------------
