@@ -1,6 +1,7 @@
 -------------------------------------------------------------------------------
 -- COLEO realchar base --
 local Player = Owner
+print(Player)
 local Character = Player.Character
 
 local RemoteFolder = Instance.new("Folder", Character)
