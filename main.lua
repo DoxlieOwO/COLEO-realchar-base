@@ -3,9 +3,9 @@
 local Player = Owner
 local Character = Player.Character
 pcall(function()
-    if script.Parent ~= Character then
-        script.Parent = Character
-    end
+	if script.Parent ~= Character then
+		script.Parent = Character
+	end
 end)
 
 local RemoteFolder = Instance.new("Folder", Character)
@@ -23,15 +23,15 @@ KeyUp.Name = "KeyDown"
 --------------------- [[ FUNCTIONS ]] ---------------
 
 local function OnKeyDown(Input, GPE)
-    if GPE then return end
+	if GPE then return end
 
-    print("On Key Down", Input.KeyCode)
+	print("On Key Down", Input.KeyCode)
 end
 
 local function OnKeyUp(Input, GPE)
-    if GPE then return end
+	if GPE then return end
 
-    print("On Key Up", Input.KeyCode)
+	print("On Key Up", Input.KeyCode)
 end
 
 
@@ -58,14 +58,14 @@ end)
 
 
 --------------------- [[ MAIN ]] ---------------
-KeyDown.OnServerEvent:Connect(funcion(iPlayer, Input, GPE)
-    if iPlayer ~= Player then return end
-    OnKeyDown(Input, GPE)
+KeyDown.OnServerEvent:Connect(function(iPlayer, Input, GPE)
+	if iPlayer ~= Player then return end
+	OnKeyDown(Input, GPE)
 end)
 
-KeyUp.OnServerEvent:Connect(funcion(iPlayer, Input, GPE)
-    if iPlayer ~= Player then return end
-    OnKeyUp(Input, GPE)
+KeyUp.OnServerEvent:Connect(function(iPlayer, Input, GPE)
+	if iPlayer ~= Player then return end
+	OnKeyUp(Input, GPE)
 end)
 
 print("COLEO realchar base loaded: ", Player)
