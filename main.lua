@@ -17,7 +17,7 @@ local KeyDown = Instance.new("RemoteEvent", Character)
 KeyDown.Name = "KeyDown"
 
 local KeyUp = Instance.new("RemoteEvent", Character)
-KeyUp.Name = "KeyDown"
+KeyUp.Name = "KeyUp"
 
 
 --------------------- [[ FUNCTIONS ]] ---------------
@@ -42,7 +42,7 @@ local KeyUp = script.Parent:WaitForChild("KeyUp")
 local KeyDown = script.Parent:WaitForChild("KeyDown")
 
 local UserInputService = game:GetService("UserInputService")
-local Mouse = owner:GetMouse() :: Mouse
+local Mouse = owner:GetMouse()
 
 
 
